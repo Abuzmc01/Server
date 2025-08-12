@@ -4,13 +4,12 @@ Author: Themedesigner
 Email: niravjoshi87@gmail.com
 File: scss
 */
-
 @import '../variable';
-$themecolor: #1976d2;
+$themecolor: #009efb;
 $themecolor-dark: #028ee1;
-$topbar: #1976d2;
-$topbar-alt: #ffffff;
+$topbar: #455a64;
 $themecolor-alt: #26c6da;
+$topbar-alt: #ffffff;
 /*******************
 /*Top bar
 *******************/
@@ -140,6 +139,6 @@ a.link {
       color: $themecolor;
       i {
         color: $themecolor;
-      }    
+      }  
     }
 }

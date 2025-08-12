@@ -6,43 +6,62 @@ File: scss
 */
 
 @import '../variable';
-$themecolor: #1976d2;
+$themecolor: #00897b;
 $themecolor-dark: #028ee1;
-$topbar: #1976d2;
-$topbar-alt: #ffffff;
-$themecolor-alt: #26c6da;
+$topbar: #00897b;
+$themecolor-alt: #00897b;
+$sidebar:#272c33;
+$sidebar-text: #798699;
+$sidebar-icons: #798699;
+$sidebar-dark: #181c22;
+$topbar-alt: #272c33;
 /*******************
 /*Top bar
 *******************/
 
 .topbar {
     background: $topbar;
-    .navbar-header{
-        background: $topbar-alt;
-    }
     
-    
-    .top-navbar .navbar-header .navbar-brand .light-logo{
+    .top-navbar .navbar-header .navbar-brand .dark-logo{
         display: none;
+    }
+    .top-navbar .navbar-header .navbar-brand .light-logo{
+        display: inline-block;
         color:rgba(255, 255, 255, 0.8);
     }
     .navbar-light .navbar-nav .nav-item > {
         a.nav-link {
-           
-            color: $white!important;
+            color: rgba(255, 255, 255, 0.8)!important;
             &:hover,
             &:focus {
-                 color: rgba(255, 255, 255, 0.8)!important;
+                color: $white!important;
             }
         }
     }
+    .navbar-header{
+        background: $topbar-alt;
+    }
 }
-
+.logo-center .topbar {
+    .navbar-header {
+        background: transparent;
+        box-shadow: none;
+    }
+    .top-navbar .navbar-header .navbar-brand .dark-logo{
+        display: none;
+    }
+    .top-navbar .navbar-header .navbar-brand .light-logo{
+        display: inline-block;
+        color:rgba(255, 255, 255, 0.8);
+    }
+}
 
 /*******************
 /*General Elements
 *******************/
-
+a{
+    color:$themecolor;
+}
 a.link {
     &:hover,
     &:focus {
@@ -121,6 +140,26 @@ a.link {
 /*******************
 /*sidebar navigation
 *******************/
+.card-no-border .left-sidebar, .card-no-border .sidebar-nav{
+    background: $sidebar;
+}
+.mini-sidebar .sidebar-nav{
+    background: transparent;
+}
+@media (min-width: 768px) {
+.mini-sidebar .sidebar-nav #sidebarnav>li>ul{
+        background: $sidebar-dark;
+    }
+}    
+.sidebar-nav {
+    background: $sidebar;
+}
+.user-profile .profile-text a{
+    color: $sidebar-text!important;
+}
+.card-no-border .sidebar-footer{
+    background: $sidebar-dark;
+}
 
 .label-themecolor{
     background:$themecolor; 
@@ -142,4 +181,8 @@ a.link {
         color: $themecolor;
       }    
     }
+}
+
+.sidebar-nav ul li.nav-small-cap {
+    color: $sidebar-text;
 }
