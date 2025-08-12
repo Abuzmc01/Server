@@ -1,0 +1,7 @@
+name: "Hostiko-Material"
+description: "Designingmedia"
+author: "Hostiko"
+config:
+  parent: twenty-one
+properties:
+  serverSidePagination: false # Defines client side will handle pagination
